@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  desc: MyString
+  todo_flag: false
+  list_id: 
+
+two:
+  desc: MyString
+  todo_flag: false
+  list_id: 
