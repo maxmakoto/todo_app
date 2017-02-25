@@ -2,6 +2,8 @@
 
 <h1>Lists</h1>
 
+<%= hello_world %>
+
 <table>
   <thead>
     <tr>
@@ -13,7 +15,7 @@
   <tbody>
     <% @lists.each do |list| %>
       <tr>
-        <td><%= link_to list.name, items_path(list_id: list.id) %></td>
+        <td><%= link_to list.name, items_path(list) %></td>
         <td><%= link_to 'Edit', edit_list_path(list) %></td>
         <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

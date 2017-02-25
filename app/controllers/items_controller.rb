@@ -4,8 +4,8 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @list_id = params[:list_id] || 1
-    @items = List.find(@list_id).items.where(todo_flag: false)
+    @list = List.find(params[:id])
+    @items = @list.items.where(todo_flag: false)
   end
 
   # GET /items/1
@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = Item.new(list_id: params[:list_id])
+    @item = Item.new(list_id: params[:id])
   end
 
   # GET /items/1/edit

@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
+  
+  resources :tags
+  get 'items/new/:id', to: 'items#new', as: 'new_item'
+  get 'list/:id', to: 'items#index', as: 'items'
+  post 'list/:id', to: 'items#create'
+  
   resources :items
   resources :lists
+  resources :tags
+  
+  get 'done' => 'items#done'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
